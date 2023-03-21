@@ -1,13 +1,13 @@
 {
   "name": "hexa",
   "version": "1.0.0",
-  "main": "dist/main/app.js",
+  "main": "dist/main/server.js",
   "scripts": {
-    "test": "jest --passWithNoTests --runInBand --detectOpenHandles --no-cache",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "test:stage": "npm run test -- --findRelatedTest",
     "test:ci": "npm run test -- --coverage",
-    "start": "nodemon && tsc && node dist/main/app.js",
-    "dev": "tsc-watch --onSuccess \"node ./dist/app.js\"",
+    "start": "nodemon && tsc && node dist/main/server.js",
+    "dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
     "build:watch": "npm run build --watch",
     "lint": "eslint --ignore-path .ignore --ext .ts --fix ",
     "prepare": "husky install"
