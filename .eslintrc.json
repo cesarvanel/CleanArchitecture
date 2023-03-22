@@ -12,5 +12,8 @@
         "project" : "./tsconfig.json"
     },
     "rules": {
+        "@typescript-eslint/no-namespace": "off",
+        "eslint-disable @typescript-eslint/semi":"overrides",
+        "comma-dangle":"off"
     }
 }
