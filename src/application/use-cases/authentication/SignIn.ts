@@ -1,9 +1,9 @@
-import { SignIninterface } from "@application/interface/authentification/SignIninterface";
+import { SignIninterface } from "@application/interface/authentication/SignIninterface";
 import { HashCompare } from "@application/interface/use-cases/cryptography/HashCompare";
 import { JwtGenerator } from "@application/interface/use-cases/cryptography/JwGenerator";
-import { LoadUserByEmailRepository } from "@application/interface/repositories/authentification/LoadUserByEmailRepositoty";
+import { LoadUserByEmailRepository } from "@application/interface/repositories/authentication/LoadUserByEmailRepositoty";
 import { UnauthorizedError } from "@application/errors/UnauthorizedError";
-import { SignUpInterface } from "@application/interface/authentification/SignUpInterface";
+import { SignUpInterface } from "@application/interface/authentication/SignUpInterface";
 
 export class SignIn implements SignIninterface {
   constructor(

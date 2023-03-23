@@ -8,6 +8,6 @@ export interface GetUserByIdInterface extends useCase<GetUserByIdInterface.Reque
 
 
 export namespace GetUserByIdInterface{
-    export type Request =  string
-    export type Response = User | UserNotFoundError
+    export type Request =  string;
+    export type Response = User | UserNotFoundError;
 }

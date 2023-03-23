@@ -1,5 +1,5 @@
 import {ForbiddenError} from "@application/errors/ForbiddenError";
-import { AuthenticateInterface } from "@application/interface/authentification/AuthenticateInterface";
+import { AuthenticateInterface } from "@application/interface/authentication/AuthenticateInterface";
 import { JwtVerfier } from "@application/interface/use-cases/cryptography/JwVerificator";
 
 export class Authenticate implements AuthenticateInterface {

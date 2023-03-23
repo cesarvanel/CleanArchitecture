@@ -1,4 +1,4 @@
 export interface JwtVerfier {
-    verify:(jwt : string) => Promise<string | null >
+    verify:(token : string) => Promise<string | null >
 
 }
