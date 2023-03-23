@@ -7,7 +7,7 @@ import {
   mapDocument,
 } from "@infrastructure/db/mongodb/helper/mapper";
 
-export class UserRepositories
+export class UserRepository
   implements CreateUserRepository, LoadUserByEmailRepository
 {
   private static readonly USERCOLLECTION = "users";
@@ -19,7 +19,7 @@ export class UserRepositories
   async createUser(
     userData: CreateUserRepository.Request
   ): Promise<CreateUserRepository.Response> {
-    const collection = await UserRepositories.getCollection();
+    const collection = await UserRepository.getCollection();
     const { insertedId } = await collection.insertOne({
       ...userData,
       createdAt: new Date(),
@@ -29,7 +29,7 @@ export class UserRepositories
   async loadUserByEmail(
     email: LoadUserByEmailRepository.Request
   ): Promise<LoadUserByEmailRepository.Response> {
-    const collection = await UserRepositories.getCollection();
+    const collection = await UserRepository.getCollection();
     const rawUser = await collection.findOne({ email });
     return rawUser && mapDocument(rawUser);
   }

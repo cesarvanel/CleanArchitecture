@@ -1,22 +1,14 @@
-import express, { type Application } from 'express'
-import http from 'http'
+import express, { Express } from 'express'
+import { useMiddleware } from '@main/config/middlewares';
+import { setupRoute } from '@main/config/routes';
 
-class App {
-  private readonly express: Application
-  private readonly port: number
-  private readonly httpServer: http.Server
 
-  constructor (port: number) {
-    this.port = port
-    this.express = express()
-    this.httpServer = http.createServer(this.express)
-  }
 
-  public listen = (): void => {
-    this.httpServer.listen(this.port, () => {
-      console.log('server is laungh')
-    })
-  }
+export const setUpApp = (): Express =>{
+
+  const app = express(); 
+  useMiddleware(app);
+  setupRoute(app);
+  return app ; 
+  
 }
-
-export default App

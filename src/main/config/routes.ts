@@ -1,10 +1,11 @@
+import { authenticationRoute } from "@main/routers/Authentication-routes";
+import { Router , Express } from "express";
 
-import { type Express, Router } from 'express'
+const BASE_URL  = '/api'
 
-export default (app: Express): void => {
-  const router = Router()
-  app.get('/health', (req, res) => {
-    res.status(200).json({ message: 'ok' })
-  })
-  app.use(router)
+export const setupRoute = (app : Express) =>{
+
+    const router = Router() ; 
+    app.use(BASE_URL , router)
+    authenticationRoute(router);
 }

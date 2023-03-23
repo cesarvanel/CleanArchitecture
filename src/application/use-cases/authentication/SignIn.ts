@@ -3,7 +3,6 @@ import { HashCompare } from "@application/interface/use-cases/cryptography/HashC
 import { JwtGenerator } from "@application/interface/use-cases/cryptography/JwGenerator";
 import { LoadUserByEmailRepository } from "@application/interface/repositories/authentication/LoadUserByEmailRepositoty";
 import { UnauthorizedError } from "@application/errors/UnauthorizedError";
-import { SignUpInterface } from "@application/interface/authentication/SignUpInterface";
 
 export class SignIn implements SignIninterface {
   constructor(

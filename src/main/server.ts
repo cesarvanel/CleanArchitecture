@@ -1,5 +1,11 @@
-import App from '@main/config/app'
+import DbConnections from "@infrastructure/db/mongodb/helper/db-connections";
+import { setUpApp } from "@main/config/app";
+import env from "@main/config/env";
 
-const server = new App(3000)
+DbConnections.connect(env.mongodbUrl).then(async =>{
+    const app = setUpApp();
 
-server.listen()
+    app.listen(env.port, () =>{
+        console.log(`server is running on port ${env.port}`)
+    })
+}).catch(console.error)

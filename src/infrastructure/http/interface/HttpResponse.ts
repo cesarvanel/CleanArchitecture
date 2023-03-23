@@ -1,5 +1,5 @@
 export type HttpResponse <T = any>= {
-    statutCode : number; 
+    statusCode : number; 
     body?:T 
 
 }
