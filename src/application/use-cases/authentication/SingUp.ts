@@ -1,6 +1,6 @@
 import { CreateUserRepository } from "@application/interface/repositories/authentication/createUserRepository";
-import { SignUpInterface } from "@application/interface/authentication/SignUpInterface";
-import { HahGenerator } from "@application/interface/use-cases/cryptography/HashGenerator";
+import { SignUpInterface } from "@application/interface/use-cases/authentication/SignUpInterface";
+import { HahGenerator } from "@application/interface/cryptography/HashGenerator";
 import { LoadUserByEmailRepository } from "@application/interface/repositories/authentication/LoadUserByEmailRepositoty";
 import { EmailInUseError } from "@application/errors/EmailInUseError";
 

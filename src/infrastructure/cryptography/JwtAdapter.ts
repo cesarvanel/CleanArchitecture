@@ -1,5 +1,5 @@
-import { JwtGenerator } from "@application/interface/use-cases/cryptography/JwGenerator";
-import { JwtVerfier } from "@application/interface/use-cases/cryptography/JwVerificator";
+import { JwtGenerator } from "@application/interface/cryptography/JwGenerator";
+import { JwtVerfier } from "@application/interface/cryptography/JwVerificator";
 import jwt from "jsonwebtoken";
 
 export class JwtAdapter implements JwtGenerator, JwtVerfier {

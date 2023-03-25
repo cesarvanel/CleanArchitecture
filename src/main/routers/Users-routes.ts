@@ -1,8 +1,8 @@
 import { expressRouteAdapter } from "@main/adapters/express-route-adapter";
 import { Router } from "express";
 
-export default (router : Router) => {
+export const userRoutes = (router : Router) =>{
 
-    console.log(router)
+   
 
 }

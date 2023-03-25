@@ -1,5 +1,5 @@
 import { BaseMiddleWare } from '@infrastructure/http/middleware/BaseMiddleware';
-import { AuthenticateInterface } from '@application/interface/authentication/AuthenticateInterface';
+import { AuthenticateInterface } from '@application/interface/use-cases/authentication/AuthenticateInterface';
 import { HttpResponse } from "@infrastructure/http/interface/HttpResponse";
 import { HttpRequest } from "@infrastructure/http/interface/HttpRequest"
 import { forbidden, ok } from '@infrastructure/http/helpers/http';

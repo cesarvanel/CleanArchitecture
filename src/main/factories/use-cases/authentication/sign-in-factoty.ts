@@ -1,4 +1,4 @@
-import { SignIninterface } from "@application/interface/authentication/SignIninterface";
+import { SignIninterface } from "@application/interface/use-cases/authentication/SignIninterface";
 import { SignIn } from "@application/use-cases/authentication/SignIn";
 import { UserRepository } from "@infrastructure/db/mongodb/repositories/UserRepositories";
 import { BcryptAdapter } from "@infrastructure/cryptography/BcryptAdapter";

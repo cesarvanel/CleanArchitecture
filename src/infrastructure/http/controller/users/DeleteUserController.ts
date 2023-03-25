@@ -11,7 +11,7 @@ import { BaseController } from "@infrastructure/http/controller/BaseController";
 import { UserNotFoundError } from "@application/errors/UserNotFoundError";
 import { PermissionError } from "@infrastructure/http/errors/PermissionError";
 
-export class DeleteUserByIdController extends BaseController {
+export class DeleteUserController extends BaseController {
   constructor(
     private readonly deleteUserById: DeleteUserByIdInterface,
     private readonly getUsertById: GetUserByIdInterface

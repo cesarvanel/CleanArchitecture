@@ -1,8 +1,8 @@
-import DbConnections from "@infrastructure/db/mongodb/helper/db-connections";
+import DbConnection from "@infrastructure/db/mongodb/helper/db-connections"; 
 import { setUpApp } from "@main/config/app";
 import env from "@main/config/env";
 
-DbConnections.connect(env.mongodbUrl).then(async =>{
+DbConnection.connect(env.mongodbUrl).then(_async =>{
     const app = setUpApp();
 
     app.listen(env.port, () =>{

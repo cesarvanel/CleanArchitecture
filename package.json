@@ -2,11 +2,15 @@
   "name": "hexa",
   "version": "1.0.0",
   "main": "dist/main/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesarvanel/CleanArchitecture/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:stage": "npm run test -- --findRelatedTest",
     "test:ci": "npm run test -- --coverage",
-    "start": "node dist/main/server.js",
+    "start": " nodemon && node dist/main/server.js ",
     "dev": "tsc-watch --onSuccess \"node ./dist/main/server.js\"",
     "build:watch": "npm run build --watch",
     "lint": "eslint --ignore-path .ignore --ext .ts --fix ",

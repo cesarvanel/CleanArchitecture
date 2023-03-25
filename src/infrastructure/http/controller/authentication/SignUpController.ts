@@ -1,6 +1,6 @@
 import { BaseController } from "@infrastructure/http/controller/BaseController";
-import { SignUpInterface } from "@application/interface/authentication/SignUpInterface";
-import { SignIninterface } from "@application/interface/authentication/SignIninterface";
+import { SignUpInterface } from "@application/interface/use-cases/authentication/SignUpInterface";
+import { SignIninterface } from "@application/interface/use-cases/authentication/SignIninterface";
 import { HttpResponse } from "@infrastructure/http/interface/HttpResponse";
 import { HttpRequest } from "@infrastructure/http/interface/HttpRequest";
 import { Validation } from "@infrastructure/http/interface/validation";

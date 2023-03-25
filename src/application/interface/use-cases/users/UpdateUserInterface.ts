@@ -4,13 +4,11 @@ import { User } from "@domain/entities/user";
 import { UserNotFoundError } from "@application/errors/UserNotFoundError";
 
 
-export interface UpdateUserByIdInterface extends useCase<UpdateUserByIdInterface.Request , UpdateUserByIdInterface.Response>{
-    execute:(params : UpdateUserByIdInterface.Request) => Promise<UpdateUserByIdInterface.Response>
+export interface UpdateUserInterface extends useCase<UpdateUserInterface.Request , UpdateUserInterface.Response>{
+    execute:(params : UpdateUserInterface.Request) => Promise<UpdateUserInterface.Response>
 }
 
-export namespace UpdateUserByIdInterface{
-
-    export type UserType = Partial<Omit<userProps, 'id' | 'createdAt'| 'updatedAt'>>;
-    export type Request = {userId : string ,userData : UserType }
-    export type Response = User | UserNotFoundError
+export namespace UpdateUserInterface{
+    export type Request = {userId : string ,userData : Partial<Omit<userProps, 'id' | 'createdAt'| 'updatedAt'>>}
+    export type Response = User | UserNotFoundError;
 }

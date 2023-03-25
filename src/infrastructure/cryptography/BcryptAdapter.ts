@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
-import { HahGenerator } from "@application/interface/use-cases/cryptography/HashGenerator";
-import { HashCompare } from "@application/interface/use-cases/cryptography/HashCompare";
+import { HahGenerator } from "@application/interface/cryptography/HashGenerator";
+import { HashCompare } from "@application/interface/cryptography/HashCompare";
 
 export class BcryptAdapter implements HahGenerator, HashCompare {
   constructor(private readonly salt: number) {}

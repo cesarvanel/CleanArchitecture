@@ -1,6 +1,6 @@
-import { SignIninterface } from "@application/interface/authentication/SignIninterface";
-import { HashCompare } from "@application/interface/use-cases/cryptography/HashCompare";
-import { JwtGenerator } from "@application/interface/use-cases/cryptography/JwGenerator";
+import { SignIninterface } from "@application/interface/use-cases/authentication/SignIninterface";
+import { HashCompare } from "@application/interface/cryptography/HashCompare";
+import { JwtGenerator } from "@application/interface/cryptography/JwGenerator";
 import { LoadUserByEmailRepository } from "@application/interface/repositories/authentication/LoadUserByEmailRepositoty";
 import { UnauthorizedError } from "@application/errors/UnauthorizedError";
 
