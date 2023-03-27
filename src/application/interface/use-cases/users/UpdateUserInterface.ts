@@ -9,6 +9,7 @@ export interface UpdateUserInterface extends useCase<UpdateUserInterface.Request
 }
 
 export namespace UpdateUserInterface{
-    export type Request = {userId : string ,userData : Partial<Omit<userProps, 'id' | 'createdAt'| 'updatedAt'>>}
+    export type UserDataType = Partial<Omit<userProps, 'id' | 'createdAt'| 'updatedAt'>>
+    export type Request = {userId : string ,userData :UserDataType }
     export type Response = User | UserNotFoundError;
 }
