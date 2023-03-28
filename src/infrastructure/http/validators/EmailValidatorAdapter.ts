@@ -1,5 +1,5 @@
 
-import isEmail from 'validator/es/lib/isEmail';
+import isEmail from "validator/lib/isEmail";
 import { EmailValidator } from "@infrastructure/http/validations/interface/EmailValidator";
 
 export class EmailValidatorAdapter implements EmailValidator {
